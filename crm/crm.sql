@@ -35,12 +35,12 @@ CREATE TABLE companies (
 CREATE TABLE salespeople(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fname TEXT,
-    lname TEXT, 
+    lname TEXT,
     email TEXT
-)
+);
 
 CREATE TABLE industry_memberships(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     company_id INTEGER,
     industry_id INTEGER
-)
+);
