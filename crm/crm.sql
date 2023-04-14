@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS contacts;
 DROP TABLE IF EXISTS activity;
 DROP TABLE IF EXISTS companies;
 DROP TABLE IF EXISTS salespeople;
+DROP TABLE IF EXISTS industry_memberships;
 -- CREATE TABLES
 CREATE TABLE contacts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -12,8 +13,8 @@ CREATE TABLE contacts (
     lname TEXT,
     title TEXT,
     email TEXT,
-    phone_number TEXT,
-    sales_rep INTEGER
+    company TEXT,
+    phone_number TEXT
 );
 
 CREATE TABLE activity(
@@ -36,4 +37,10 @@ CREATE TABLE salespeople(
     fname TEXT,
     lname TEXT, 
     email TEXT
+)
+
+CREATE TABLE industry_memberships(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_id INTEGER,
+    industry_id INTEGER
 )
